@@ -10,8 +10,6 @@ const Post = (props) => {
             <div>
             {props.likesCount} <span> likes</span>
             </div>
-            
-            
         </div>
 
     );

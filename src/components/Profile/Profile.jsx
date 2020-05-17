@@ -4,7 +4,7 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
 
             <div>
                 <img src='https://www.markgray.com.au/images/gallery/large/wanaka-tree.jpg' />
