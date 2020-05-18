@@ -1,14 +1,16 @@
 .nav {
   grid-area: n;
   background-color: burlywood;
+  padding: 10px;
 }
 
-.item {
+.item a {
   color: white;
+  text-decoration: none;
 }
 
-.item.active {
-  color: blueviolet;
+.item a.activeLink {
+  color: purple;
 }
 /* здесь какая-то хуйня. Почему не просто .active ? */
 
