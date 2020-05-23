@@ -13,22 +13,21 @@ let posts = [
  
 ]; 
 
-
 let dialogs = [
     {id: 1, name: 'Jim'},
     {id: 2, name: 'Marta-Marta'},
-    {id: 3, name: 'Peter'},
+    {id: 3, name: 'Peter II'},
     {id: 4, name: 'Carol'},
     {id: 5, name: 'Ursula'}
-  ]; 
+]; 
 
-  let messages = [
+let messages = [
     {id: 1, text:'Hi, how are you!'},
     {id: 2, text:'Hi, shit asshole!'},
     {id: 3, text:'How are you getting on?'},
     {id: 4, text:'Yo'},
     {id: 5, text:'Yo'}
-  ];
+];
 
 
 ReactDOM.render(<App posts={posts} dialogs={dialogs} messages={messages}  />, document.getElementById('root'));
