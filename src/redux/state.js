@@ -25,11 +25,10 @@ let state = {
             {id: 5, text:'Yo'}
         ]
     },
+
     sidebar: {
         // for homework
     }
-
-
 }
 
 export default state;
