@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
-import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/state';
+import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/dialogs-reducer';
 
 
 const Dialogs = (props) => {
@@ -36,7 +36,8 @@ const Dialogs = (props) => {
                     <div>
                         <textarea value={newMessageBody}
                                   onChange={onNewMessageChange}  
-                                  placeholder='Type dude' ></textarea>
+                                  placeholder='Type message dude' 
+                        />
                     </div>
                     <div>
                         <button onClick={onSendMessageClick} >Send</button>
