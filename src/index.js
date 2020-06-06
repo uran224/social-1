@@ -9,22 +9,16 @@ import {Provider} from 'react-redux';
 
 
 
-let rerenderEntireTree = (state) => {
-    ReactDOM.render(
-        <BrowserRouter>
-            <Provider store={store} >
-                <App /> 
-            </Provider>
-        </BrowserRouter>, document.getElementById('root'));
-    
-}
 
-rerenderEntireTree(store.getState());
+ReactDOM.render(
+    <BrowserRouter>
+        <Provider store={store} >
+            <App />
+        </Provider>
+    </BrowserRouter>, document.getElementById('root'));
 
-store.subscribe( () => {
-    let state = store.getState();
-    rerenderEntireTree(state);
-});
+
+
 
 
 // API - application program interface
