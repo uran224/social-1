@@ -3,6 +3,7 @@ import styles from './Users.module.css';
 import userPhoto from '../../assets/images/197509.jpg'
 
 const Users = (props) => {
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
@@ -18,9 +19,7 @@ const Users = (props) => {
                         onClick={(e) => { props.onPageChanged(p) }}>{p}</span>
                 })}
 
-
-            </div>
-            {/* <button onClick={this.getUsers}>Get Users</button> */}
+            </div> 
             {
                 props.users.map(u =>
                     <div key={u.id}>
@@ -63,8 +62,6 @@ const Users = (props) => {
     );
 
 }
-
-
 
 
 export default Users;
