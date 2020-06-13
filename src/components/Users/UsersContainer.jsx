@@ -1,6 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { followAC, unfollowAC, setUsersAC, setCurrentPageAC, setUsersTotalCountAC, toggleIsFetchingAC } from '../../redux/users-reducer';
+import { follow, 
+         unfollow, 
+         setUsers, 
+         setCurrentPage, 
+         setTotalUsersCount, 
+         toggleIsFetching 
+} from '../../redux/users-reducer';
 import * as axios from 'axios';
 import Users from './Users';
 import preloader from '../../assets/images/preloader2.gif';
@@ -57,7 +63,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
+/* let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) => {
             dispatch(followAC(userId));
@@ -78,6 +84,15 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(toggleIsFetchingAC(isFetching));
         }
     }
-}
+} */
 
-export default connect(mapStateToProps,mapDispatchToProps) (UsersContainer);
+
+// we shortened mapDispacthToProps function and fixed setUsersTotalCount to setTotalUsersCount
+export default connect(mapStateToProps,{
+    follow,
+    unfollow,
+    setUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    toggleIsFetching
+}) (UsersContainer);
