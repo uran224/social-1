@@ -13,6 +13,7 @@ import * as axios from 'axios';
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader.js';
 import { usersAPI } from '../../api/api';
+import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 
 
 class UsersContainer extends React.Component {
@@ -76,6 +77,8 @@ let mapStateToProps = (state) => {
     }
 }
 
+let withRedirect = withAuthRedirect(UsersContainer);  // вызываем HOC...
+
 
 export default connect(mapStateToProps,{
     follow,
@@ -86,4 +89,4 @@ export default connect(mapStateToProps,{
     //toggleIsFetching,
     toggleFollowingProgress,
     getUsers
-}) (UsersContainer);
+}) (withRedirect);     // ...и уже эту компоненту отдаём в connect
